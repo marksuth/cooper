@@ -43,7 +43,7 @@ get_header();
 <?php
 // the query
 $the_query = new WP_Query( array(
-  'category_name' => 'uncategorized',
+  'category_name' => 'uncategorised',
    'posts_per_page' => 5,
 )); 
 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
