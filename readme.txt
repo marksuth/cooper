@@ -14,7 +14,7 @@ A starter theme called Cooper.
 
 == Description ==
 
-Personal theme for marksuth.dev
+CWA blog theme
 
 == Installation ==
 

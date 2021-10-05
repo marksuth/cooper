@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -14,44 +15,38 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8">
+			<header>
+				<h1 class="page-title py-5">Recent Posts</h1>
+			</header>
+	<main id="primary" class="my-3">
+			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			while (have_posts()) :
+				the_post(); ?>
+				<div>
+					<?php the_title('<h2 class="h4 py-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+					<div class="text-muted">
+						<?php the_date('F j, Y'); ?>
+					</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
 
-			endwhile;
+					<div class="py-3">
+						<?php the_excerpt(); ?>
+					</div>
+					<div class="d-flex">
+					<div class="text-muted font-monospace small">
+						<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
+					</div>
+					</div>
+					<hr />
+				</div>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+			<?php endwhile; ?>
 	</main><!-- #main -->
-
+		</div>
+</div>
 <?php
-get_sidebar();
 get_footer();

@@ -14,7 +14,9 @@
 
 get_header();
 ?>
-
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8">
 	<main id="primary" class="site-main">
 
 		<?php
@@ -32,7 +34,7 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+		</div>
+	</div>
 <?php
-get_sidebar();
 get_footer();
