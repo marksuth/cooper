@@ -20,6 +20,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+  <meta name="theme-color" content="#214154">
 </head>
 
 <body <?php body_class(); ?>>
