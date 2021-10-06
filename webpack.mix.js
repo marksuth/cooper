@@ -5,7 +5,7 @@ mix.js('resources/js/app.js', 'js')
         autoprefixer: {
             options: {
                 browsers: [
-                    'last 3 versions',
+                    'last 2 versions',
                     'not dead',
                 ]
             }

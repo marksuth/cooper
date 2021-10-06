@@ -1,5 +1,6 @@
 $blue:    #214154;
 $white: #ffffff;
+$gray-600: #ced1d2;
 
 $enable-rounded: false;
 $enable-deprecation-messages: false;
@@ -13,3 +14,6 @@ $link-decoration:                         dashed;
 
 $font-family-sans-serif:      "Inter", sans-serif;
 $font-family-monospace:       monospace;
+
+$navbar-dark-color:           $gray-600;
+$navbar-dark-hover-color:    darken($navbar-dark-color, 5%);
