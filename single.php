@@ -16,6 +16,7 @@ while (have_posts()) :
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-8">
+		<main id="primary" class="site-main">
 			<article>
 				<header>
 					<h1 class="entry-title py-5"><?php the_title(); ?></h1>
@@ -38,6 +39,7 @@ while (have_posts()) :
 						</p>
 					</footer>
 				</article>
+			</main>
 <?php endwhile; ?>
 		</div>
 	</div>
