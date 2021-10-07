@@ -20,8 +20,14 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-  <meta name="theme-color" content="#214154">
-</head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Mark Sutherland">
+<meta name="application-name" content="Mark Sutherland">
+<meta name="msapplication-TileColor" content="#214154">
+<meta name="theme-color" content="#214154"></head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
