@@ -31,7 +31,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<nav class="navbar navbar-static-top navbar-expand-lg navbar-dark">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-blur navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="/">MARK SUTHERLAND</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
