@@ -111,7 +111,7 @@ function cooper_scripts()
 {
 	wp_enqueue_style('cooper-style', get_stylesheet_uri(), array(), _S_VERSION);
 
-	wp_enqueue_script('cooper-js', get_template_directory_uri() . '/js/app.js', array(), _S_VERSION, true);
+	wp_enqueue_script('cooper-js', get_template_directory_uri() . '/js/app.js', true);
 }
 add_action('wp_enqueue_scripts', 'cooper_scripts');
 
