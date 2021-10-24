@@ -12,7 +12,7 @@
 
 ?>
 
-<footer class="site-footer py-4 text-center">
+<footer class="site-footer py-4 mt-4 text-center bg-dark">
 	<div class="container">
 <p class="small">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 <p><a href="https://xn--sr8hvo.ws/%F0%9F%93%BB%F0%9F%93%85%F0%9F%9A%BF/previous">←</a>

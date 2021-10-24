@@ -72,6 +72,17 @@ if (!function_exists('cooper_setup')) :
 				'script',
 			)
 		);
+		add_theme_support( 'post-formats', array(
+				'gallery',
+				'quote',
+				'video',
+				'aside',
+				'image',
+				'link',
+				'status',
+				'audio',
+				'chat'
+			) );
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
@@ -181,3 +192,15 @@ add_filter('attachment_link', 'cleanup_attachment_link');
 update_option('thumbnail_size_w', 750);
 update_option('thumbnail_size_h', 750);
 update_option('thumbnail_crop', 1);
+
+function sanitize_pagination($content) {
+    // Remove role attribute
+    $content = str_replace('role="navigation"', '', $content);
+
+    // Remove h2 tag
+    $content = preg_replace('#<h2.*?>(.*?)<\/h2>#si', '', $content);
+
+    return $content;
+}
+
+add_action('navigation_markup_template', 'sanitize_pagination');

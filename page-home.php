@@ -71,9 +71,12 @@ get_header();
 				else : ?>
 					<p><?php __('<p>No Recent Posts</p>'); ?></p>
 				<?php endif; ?>
-
+				<p class="text-end">
+<a href="/posts" class="btn btn-primary">View All Posts <i class="fa fa-chevron-right fa-fw"></i></a>
+				</p>
+			</div>
+		</div>
 	</main><!-- #main -->
-</div>
 </div>
 <?php
 get_footer();

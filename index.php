@@ -45,8 +45,12 @@ get_header();
 				</div>
 
 			<?php endwhile; ?>
+		<div class="text-end"><?php the_posts_pagination(); ?></div>
+
+
 	</main><!-- #main -->
 		</div>
+</div>
 </div>
 <?php
 get_footer();
