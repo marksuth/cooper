@@ -30,7 +30,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer py-3">
+		<footer class="entry-footer py-3 text-muted">
 			<?php
 			edit_post_link(
 				sprintf(
