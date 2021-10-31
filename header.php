@@ -58,17 +58,17 @@
       </button>
 
       <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about/">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/posts/">Posts</a>
-          </li>
-        </ul>
+      <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu',
+                'container' => false,
+                'menu_class' => '',
+                'fallback_cb' => '__return_false',
+                'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
+                'depth' => 2,
+                'walker' => new bs_nav_menu_walker()
+            ));
+            ?>
       </div>
     </div>
   </nav>
