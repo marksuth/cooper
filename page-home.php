@@ -49,14 +49,15 @@ get_header();
 				));
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<div>
-							<?php the_title('<h2 class="h4 py-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+							<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 							<div class="text-muted">
 								<?php the_date('F j, Y'); ?>
 							</div>
-
-
 							<div class="py-3">
 								<?php the_excerpt(); ?>
+								<p class="text-end">
+									<a href="<?php the_permalink(); ?>" class="btn btn-primary">View Post ></a>
+								</p>
 							</div>
 							<div class="d-flex">
 								<div class="text-muted font-monospace small">
