@@ -50,9 +50,9 @@ get_header();
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<div>
 							<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
-							<div class="text-muted">
-								<?php the_date('F j, Y'); ?>
-							</div>
+							<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
+						<?php the_date(); ?>
+					</relative-time>
 							<div class="py-3">
 								<?php the_excerpt(); ?>
 								<p class="text-end">
