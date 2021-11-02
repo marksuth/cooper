@@ -34,8 +34,9 @@ get_header();
 					<a href="<?php the_permalink(); ?>">
 						<?php the_content(); ?>
 						<small class="text-muted text-right">
+						<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
 						<?php the_date(); ?>
-						</small>
+					</relative-time>						</small>
 					</a>
 					</div>
 				</div>
@@ -46,7 +47,9 @@ get_header();
 					<hr />
 					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 					<div class="text-muted">
+					<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
 						<?php the_date(); ?>
+					</relative-time>
 					</div>
 					<div class="py-3">
 						<?php the_excerpt(); ?>
