@@ -33,6 +33,9 @@ get_header();
 					<div class="bg-white p-1">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_content(); ?>
+						<small class="text-muted text-right">
+						<?php the_date(); ?>
+						</small>
 					</a>
 					</div>
 				</div>
@@ -43,7 +46,7 @@ get_header();
 					<hr />
 					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 					<div class="text-muted">
-						<?php the_date('F j, Y'); ?>
+						<?php the_date(); ?>
 					</div>
 					<div class="py-3">
 						<?php the_excerpt(); ?>
