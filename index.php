@@ -17,18 +17,31 @@ get_header();
 ?>
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-md-8">
+		<div class="col-md-10">
 			<header>
 				<h1 class="page-title py-5">Recent Posts</h1>
 			</header>
 	<main id="primary" class="my-3">
+		<div class="row">
 			<?php
 			/* Start the Loop */
 			while (have_posts()) :
-				the_post(); ?>
-				<div>
+				the_post();
+				if ( has_post_format('image') ) { 
+				?>
+				<div class="col-4 p-1">
+					<div class="bg-white p-1">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_content(); ?>
+					</a>
+					</div>
+				</div>
+
 					<?php
-					 the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+				} else { ?>
+					<div class="col-12 my-2">
+					<hr />
+					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 					<div class="text-muted">
 						<?php the_date('F j, Y'); ?>
 					</div>
@@ -43,9 +56,12 @@ get_header();
 					</div>
 					</div>
 					<hr />
-				</div>
 
-			<?php endwhile; ?>
+		</div>
+			<?php 
+				};
+		endwhile; ?>
+		</div>
 		<div class="text-end"><?php the_posts_pagination(); ?></div>
 
 
