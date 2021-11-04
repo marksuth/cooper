@@ -71,7 +71,20 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$comment_args = array(
+		'class_submit' => 'btn btn-dark submit',
+		'comment_field' => '<div class="comment-form-comment mb-3"><label for="comment" class="form-label">' . _x( 'Your Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true" required="required"></textarea></div>',
+		'fields' => array(
+			'author' => '<div class="comment-form-author mb-3">' . '<label for="author" class="form-label">' . __( 'Your Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+			'<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . ' /></div>',
+			'email'  => '<div class="comment-form-email mb-3"><label for="email" class="form-label">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+			'<input id="email" name="email" class="form-control" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"'  . ' /></div>',
+			'url'    => '<div class="comment-form-url mb-3"><label for="url" class="form-label">' . __( 'Website' ) . '</label> ' .
+			'<input id="url" name="url" class="form-control" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>',
+			)
+	);
+	comment_form($comment_args);
+
 	?>
 
 </div><!-- #comments -->

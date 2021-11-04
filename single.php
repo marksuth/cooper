@@ -66,6 +66,12 @@ while (have_posts()) :
 						</p>
 					</footer>
 				</article>
+				<hr>
+				<?php 
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+				?>
 			</main>
 		</div>
 		<?php }; endwhile; ?>

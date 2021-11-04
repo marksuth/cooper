@@ -60,8 +60,10 @@ get_header();
 								</p>
 							</div>
 							<div class="d-flex">
+
 								<div class="text-muted font-monospace small">
 									<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
+									<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
 								</div>
 							</div>
 							<hr />

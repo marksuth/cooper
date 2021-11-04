@@ -30,13 +30,23 @@ get_header();
 				if ( has_post_format('image') ) { 
 				?>
 				<div class="col-4 p-1">
-					<div class="bg-white p-1">
+					<div class="bg-white p-1 text-dark">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_content(); ?>
-						<small class="text-muted text-right">
-						<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
+					</a>
+					<div class="text-dark small">
+					<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?></div>
+						<div class="row">
+<div class="col-6">						<small class="text-muted">
+<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
 						<?php the_date(); ?>
-					</relative-time>						</small>
+					</relative-time>
+				</small></div>
+<div class="col-6 text-muted text-end small">
+	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
+</div>
+</div>
+												
 					</a>
 					</div>
 				</div>
@@ -57,10 +67,12 @@ get_header();
 							<a href="<?php the_permalink(); ?>" class="btn btn-link">View Post ></a>
 					</div>
 					<div class="d-flex">
-					<div class="text-muted font-monospace small">
-						<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
-					</div>
-					</div>
+
+<div class="text-muted font-monospace small">
+	<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
+	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
+</div>
+</div> 
 					<hr />
 
 		</div>

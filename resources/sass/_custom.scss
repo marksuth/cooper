@@ -9,7 +9,7 @@ html {
     background: rgba($primary, 0.7);
     backdrop-filter: blur(20px);
   }
-} “ ”
+}
 .intro {
     text-align: center;
     padding-top: 5vh;
@@ -47,11 +47,4 @@ html {
   }
   .site-main {
 min-height: calc(90vh - 60px);
-  }
-  .page-id-1838 {
-    background: #DD645E;
-    & .navbar-blur {
-      background: #DD645E;
-    }
-
   }
