@@ -1,6 +1,9 @@
 html {
   overflow-y: scroll;
 }
+article > main a {
+  font-weight: 500;
+}
 .navbar-blur {
   background: $primary;
 }
