@@ -49,7 +49,8 @@ get_header();
 				));
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article class="h-entry">
-							<?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+							<header><?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?></header>
+							<main>
 							<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
 						<time class="dt-published"><?php the_date(); ?></time>
 					</relative-time>
@@ -59,6 +60,8 @@ get_header();
 									<a href="<?php the_permalink(); ?>" class="btn btn-primary u-url">View Post ></a>
 								</p>
 							</div>
+							</main>
+							<footer>
 							<div class="d-flex">
 
 								<div class="text-muted font-monospace small p-category">
@@ -66,6 +69,8 @@ get_header();
 									<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
 								</div>
 							</div>
+							</footer>
+						</article>
 							<hr />
 						</div>
 
