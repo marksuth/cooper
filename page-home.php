@@ -72,8 +72,6 @@ get_header();
 							</footer>
 						</article>
 							<hr />
-						</div>
-
 					<?php endwhile;
 					wp_reset_postdata();
 				else : ?>
