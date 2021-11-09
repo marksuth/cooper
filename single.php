@@ -17,18 +17,19 @@ while (have_posts()) :
 <div class="container">
 	<div class="row justify-content-center">
 	<?php if ( has_post_format('image') ) { ?>
-			<article class="col-md-6">
-				<div class="bg-white p-3 mb-3">
-				<main>
+			<article class="col-md-6 h-entry">
+				<div class="bg-white p-3 mb-3 row">
+				<header div class="col-12 order-last">
+						<h1 class="h5 pt-3 mb-0 text-dark p-name"><?php the_title(); ?></h1>
+						<p class="text-muted" class="dt-published"><?php the_date(); ?></p>
+				</header>
+				<main class="col-12 u-photo order-first">
 					<?php the_content(); ?>
 				</main>
-				<header>
-						<h1 class="h5 pt-3 mb-0 text-dark"><?php the_title(); ?></h1>
-						<p class="text-muted"><?php the_date(); ?></p>
-				</header>
+
 				</div>
 				<footer>
-						<p class="text-muted">
+						<p class="text-muted p-category">
 							<?php the_tags(); 
 							
 							wp_link_pages(
@@ -44,16 +45,16 @@ while (have_posts()) :
 		<?php } else { ?>
 		<div class="col-md-8">
 		<main id="primary" class="site-main">
-			<article>
+			<article class="h-entry">
 				<header>
-					<h1 class="entry-title py-5"><?php the_title(); ?></h1>
-					<p class="text-muted"><?php the_date(); ?></p>
+					<h1 class="entry-title py-5 p-name"><?php the_title(); ?></h1>
+					<p class="text-muted dt-published"><?php the_date(); ?></p>
 				</header>
-					<main>
+					<main class="e-content">
 					<?php the_content(); ?>
 					</main>
 					<footer>
-						<p class="text-muted">
+						<p class="text-muted p-category">
 							<?php the_tags(); 
 							
 							wp_link_pages(
