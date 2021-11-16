@@ -1,17 +1,17 @@
 html {
   overflow-y: scroll;
 }
+body {
+  background-image : url('/wp-content/themes/cooper/images/space.gif');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
 article > main a {
   font-weight: 500;
 }
 .navbar-blur {
-  background: $primary;
-}
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  .navbar-blur {
-    background: rgba($primary, 0.7);
-    backdrop-filter: blur(20px);
-  }
+  background: $black;
+  font-family: $font-family-monospace;
 }
 .intro {
     text-align: center;
@@ -42,12 +42,35 @@ article > main a {
     }
   }
   .navbar-brand {
-    text-transform: uppercase;
-    font-weight: 800;
+    background:  url("/wp-content/themes/cooper/images/retro-logo.png") no-repeat scroll 0% 0%;
+    width: 350px;
+    height: 70px;
+    background-size: contain;
+    background-position: center;
+    text-indent: -3333px;
+    border: 0;
+    margin: 0;
   }
   .avatar {
-    border-radius: 50%;
+    filter:drop-shadow(0px 0px 25px blue);
   }
   .site-main {
 min-height: calc(90vh - 60px);
+  }
+  .navbar {
+    border-bottom: 7px ridge;
+    min-height: 90px;
+  }
+  .btn {
+    background-color: transparent;
+    color: rgb(0, 255, 0);
+    text-decoration: underline;
+    border: 0;
+    font-weight: 700;
+  }
+  .site-footer {
+    background-color: black !important;
+  }
+  .h-entry {
+    margin-top: 1.5rem;
   }

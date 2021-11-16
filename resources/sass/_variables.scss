@@ -1,20 +1,25 @@
 $blue:    #214154;
 $white: #ffffff;
+$black: #000000;
 $gray-600: #ced1d2;
 $dark: darken($blue, 10%);
 
 $enable-rounded: false;
 $enable-deprecation-messages: false;
 
-$body-bg:                   $blue;
+$body-bg:                   $black;
 $body-color:                $white;
-$headings-font-weight: 700;
 
-$link-color:                              $gray-600;
+$link-color:                      $gray-600;
 $link-decoration:                 underline;
 
-$font-family-sans-serif:      "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-monospace:       monospace;
+$font-family-sans-serif:      Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       "Courier New", courier, monospace;
+$font-family-serif:          "Times New Roman", serif;
+
+$headings-font-family:       $font-family-monospace;
+$headings-font-weight:       700;
+$font-family-base:           $font-family-serif;
 
 $navbar-dark-color:           $gray-600;
 $navbar-dark-hover-color:    darken($navbar-dark-color, 5%);
