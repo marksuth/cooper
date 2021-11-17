@@ -2,12 +2,12 @@ html {
   overflow-y: scroll;
 }
 body {
-  background-image : url('/wp-content/themes/cooper/images/space.gif');
+  background-image : url('/wp-content/themes/cooper-retro/images/space.gif');
   background-repeat: repeat;
   background-attachment: fixed;
 }
 article > main a {
-  font-weight: 500;
+  font-weight: 700;
 }
 .navbar-blur {
   background: $black;
@@ -42,7 +42,7 @@ article > main a {
     }
   }
   .navbar-brand {
-    background:  url("/wp-content/themes/cooper/images/retro-logo.png") no-repeat scroll 0% 0%;
+    background:  url("/wp-content/themes/cooper-retro/images/retro-logo.png") no-repeat scroll 0% 0%;
     width: 350px;
     height: 70px;
     background-size: contain;
@@ -71,6 +71,9 @@ min-height: calc(90vh - 60px);
   .site-footer {
     background-color: black !important;
   }
-  .h-entry {
-    margin-top: 1.5rem;
+.bg-white {
+  background-color: transparent !important;
+  & .text-dark {
+    color: cyan !important;
   }
+}

@@ -30,6 +30,8 @@
                 'walker' => new bs_nav_menu_walker()
             ));
             ?>
+            <?php if (function_exists('theme_switcha_display_dropdown')) theme_switcha_display_dropdown(); ?>
+
   </div>
 </footer>
 <?php wp_footer(); ?>
