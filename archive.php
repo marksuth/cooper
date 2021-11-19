@@ -9,42 +9,80 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<header>
+			<?php
+			the_archive_title( '<h1 class="page-title py-5">', '</h1>' );
+			?>
+			</header>
+	<main id="primary" class="my-3">
+		<div class="row">
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
+			while (have_posts()) :
 				the_post();
+				if ( has_post_format('image') ) { 
+				?>
+				<div class="col-4 p-1">
+					<div class="bg-white p-1 text-dark">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_content(); ?>
+					</a>
+					<div class="text-dark small">
+					<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?></div>
+						<div class="row">
+<div class="col-6">						<small class="text-muted">
+<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
+						<?php the_date(); ?>
+					</relative-time>
+				</small></div>
+<div class="col-6 text-muted text-end small">
+	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
+</div>
+</div>
+												
+					</a>
+					</div>
+				</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					<?php
+				} else { ?>
+					<div class="col-12 my-2">
+					<hr />
+					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+					<div class="text-muted">
+					<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
+						<?php the_date(); ?>
+					</relative-time>
+					</div>
+					<div class="py-3">
+						<?php the_excerpt(); ?>
+						<p class="text-end">
+							<a href="<?php the_permalink(); ?>" class="btn btn-link">View Post ></a>
+					</div>
+					<div class="d-flex">
 
-			endwhile;
+<div class="text-muted font-monospace small">
+	<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
+	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
+</div>
+</div> 
+					<hr />
 
-			the_posts_navigation();
+		</div>
+			<?php 
+				};
+		endwhile; ?>
+		</div>
+		<div class="text-end"><?php the_posts_pagination(); ?></div>
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
 
 	</main><!-- #main -->
+		</div>
+</div>
+</div>
 
 <?php
 get_footer();
