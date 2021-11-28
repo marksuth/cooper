@@ -1,11 +1,22 @@
 html {
   overflow-y: scroll;
 }
+body {
+  background: linear-gradient(to bottom, $sky 0%, lighten($sky, 40%) 50%);
+  background-attachment: fixed;
+}
 article > main a {
   font-weight: 500;
 }
 .navbar-blur {
   background: $primary;
+}
+.bauble-avatar {
+  margin-top: calc(-5vh - 50px); 
+}
+.footer-tree {
+  visibility: hidden;
+  height: 0;
 }
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .navbar-blur {
@@ -16,6 +27,8 @@ article > main a {
 .intro {
     text-align: center;
     padding-top: 5vh;
+    color: $red;  
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
     & h1 {
       font-size: 3rem;
       margin: 0;
@@ -30,8 +43,8 @@ article > main a {
   }
   @media (min-width: 992px) { 
     .intro {
+      padding-top: 20vh;
         text-align: left;
-        padding-top: 20vh;
         padding-bottom:10vh;
     & h1 {
       font-size: 5rem;
@@ -40,14 +53,69 @@ article > main a {
       font-size: 2.5rem;
     }
     }
+    .bauble-avatar {
+      margin-top: calc(-20vh - 50px); 
+    }
+    .footer-tree {
+      width: 200px;
+      height: auto;
+      float: left;
+      margin-top: -250px;
+      margin-left: 50px;
+      visibility: visible;
+    }
   }
   .navbar-brand {
     text-transform: uppercase;
     font-weight: 800;
   }
-  .avatar {
-    border-radius: 50%;
-  }
   .site-main {
 min-height: calc(90vh - 60px);
   }
+
+.site-footer {
+  background-image: url(/wp-content/themes/cooper-xmas/images/footer.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: $dark;
+  font-weight: 500;
+
+}
+
+
+hr {
+  background: repeating-linear-gradient(
+  45deg,
+  #ffffff,
+  #ffffff 10px,
+  $red 10px,
+  $red 20px
+);
+height: 10px;
+padding-top:10px;
+border-radius: 5px;
+opacity: 1;
+}
+
+.post-surround {
+  border-radius: 10px;
+  background: rgba($white, 0.8);
+  & a {
+    color: $red;
+  }
+  padding: 0.5rem;
+}
+#lights
+{
+  background-image: url(/wp-content/themes/cooper-xmas/images/lights.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height:50px;
+  margin-bottom: -50px;
+  margin: top -15px;
+
+}
+input {
+  background-color: #ffffff;
+}

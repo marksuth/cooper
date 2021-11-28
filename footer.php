@@ -12,7 +12,8 @@
 
 ?>
 
-<footer class="site-footer py-4 mt-4 text-center bg-dark">
+<footer class="site-footer py-4 mt-4 text-center">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/xmas-tree.png" alt="" class="footer-tree">
 	<div class="container">
   <p><a href="https://xn--sr8hvo.ws/%F0%9F%93%BB%F0%9F%93%85%F0%9F%9A%BF/previous">←</a>
   An IndieWeb Webring 🕸💍

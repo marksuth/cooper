@@ -21,8 +21,8 @@ get_header();
 	<main id="primary" class="site-main">
 		<div class="intro h-card ">
 			<div class="row justify-content-center">
-				<div class="col-md-3 col-6">
-					<img src="/wp-content/themes/cooper/images/avatar.jpg" alt="Mark Sutherland" class="avatar u-photo img-fluid" height="306" width="306" />
+				<div class="col-md-3 col-6 bauble-avatar">
+					<img src="/wp-content/themes/cooper-xmas/images/bauble-avatar.png" alt="Mark Sutherland" class="avatar u-photo img-fluid" height="306" width="306" />
 				</div>
 				<div class="col-md-9">
 					<h1 class="p-name pt-5 px-0 mx-0">Mark Sutherland</h1>
@@ -49,6 +49,7 @@ get_header();
 				));
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article class="h-entry">
+							<div class="post-surround">
 							<header><?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?></header>
 							<main>
 							<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
@@ -57,10 +58,11 @@ get_header();
 							<div class="py-3 p-summary">
 								<?php the_excerpt(); ?>
 								<p class="text-end">
-									<a href="<?php the_permalink(); ?>" class="btn btn-primary u-url">View Post ></a>
+									<a href="<?php the_permalink(); ?>" class="btn btn-info u-url">View Post ></a>
 								</p>
 							</div>
 							</main>
+							</div>
 							<footer>
 							<div class="d-flex">
 

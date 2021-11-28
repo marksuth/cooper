@@ -2,15 +2,19 @@ $blue:    #214154;
 $white: #ffffff;
 $gray-600: #ced1d2;
 $dark: darken($blue, 10%);
+$sky: #00bcd4;
+$red: #b92a20;
+$light-sky: lighten($sky, 10%);
 
 $enable-rounded: false;
 $enable-deprecation-messages: false;
 
-$body-bg:                   $blue;
-$body-color:                $white;
+$body-bg:                   $sky;
+$body-color:                $dark;
 $headings-font-weight: 700;
+$headings-color:            $red;
 
-$link-color:                              $gray-600;
+$link-color:                              $red;
 $link-decoration:                 underline;
 
 $font-family-sans-serif:      "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

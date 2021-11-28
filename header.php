@@ -72,3 +72,4 @@
       </div>
     </div>
   </nav>
+  <div id="lights"></div>
