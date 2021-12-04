@@ -14,9 +14,9 @@ get_header();
 <div class="row justify-content-center">
 		<div class="col-md-10">
 		<main id="primary" class="site-main">
-	<h1 style="font-size:5rem" class="font-monospace">404 :-(</h1>
+	<h1 style="font-size:5rem" class="font-monospace text-white">404 :-(</h1>
 	<p class="text-muted">HTTP ERROR 404</p>
-	<p>The page you requested may have been moved or deleted.</p>
+	<p class="text-white">The page you requested may have been moved or deleted.</p>
 	<p><a href="/" class="btn btn-outline-light my-3 btn-lg">Return Home</a></p>
 		</main>
 </div>

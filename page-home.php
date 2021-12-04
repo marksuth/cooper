@@ -19,7 +19,7 @@ get_header();
 ?>
 <div class="container">
 	<main id="primary" class="site-main">
-		<div class="intro h-card ">
+		<div class="intro h-card">
 			<div class="row justify-content-center">
 				<div class="col-md-3 col-6 bauble-avatar">
 					<img src="/wp-content/themes/cooper-xmas/images/bauble-avatar.png" alt="Mark Sutherland" class="avatar u-photo img-fluid" height="306" width="306" />

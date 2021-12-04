@@ -10,13 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title py-5">', '</h1>' ); ?>
+<header class="py-5">
+					<div class="entry-title">
+		<?php the_title( '<h1>', '</h1>' ); ?>
+					</div>
 	</header><!-- .entry-header -->
-
-	<?php cooper_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-content post-surround p-4">
 		<?php
 		the_content();
 

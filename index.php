@@ -55,27 +55,32 @@ get_header();
 				} else { ?>
 					<div class="col-12 my-2">
 					<hr />
-					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
-					<div class="text-muted">
-					<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
-						<?php the_date(); ?>
+					<article class="h-entry">
+							<div class="post-surround">
+							<header><?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?></header>
+							<main>
+							<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
+						<time class="dt-published"><?php the_date(); ?></time>
 					</relative-time>
-					</div>
-					<div class="py-3">
-						<?php the_excerpt(); ?>
-						<p class="text-end">
-							<a href="<?php the_permalink(); ?>" class="btn btn-link">View Post ></a>
-					</div>
-					<div class="d-flex">
+							<div class="py-3 p-summary">
+								<?php the_excerpt(); ?>
+								<p class="text-end">
+									<a href="<?php the_permalink(); ?>" class="btn btn-info u-url">View Post ></a>
+								</p>
+							</div>
+							</main>
+							</div>
+							<footer>
+							<div class="d-flex">
 
-<div class="text-muted font-monospace small">
-	<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
-	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
-</div>
-</div> 
-					<hr />
-
-		</div>
+								<div class="text-muted font-monospace small p-category">
+									<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
+									<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
+								</div>
+							</div>
+							</footer>
+						</article>
+							<hr />
 			<?php 
 				};
 		endwhile; ?>
