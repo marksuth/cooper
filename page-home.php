@@ -28,8 +28,8 @@ get_header();
 					<h1 class="p-name pt-5 px-0 mx-0">Mark Sutherland</h1>
 					<p class="p-note">Web Designer, Developer & Digital Creative</p>
 					<ul class="nav nav-pills justify-content-center justify-content-md-start">
-						<li class="nav-item"><a data-hint="Website" href="https://marksuth.dev" class="nav-link u-url" rel="me" title="Website"><i class="fas fa-globe"></i></a></li>
-						<li class="nav-item"><a data-hint="Twitter" class="nav-link" href="https://twitter.com/marksuth" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+						<li class="nav-item"><a data-hint="Website" href="https://marksuth.dev" class="nav-link u-url u-uid" rel="me" title="Website"><i class="fas fa-globe"></i></a></li>
+						<li class="nav-item"><a data-hint="Twitter" class="nav-link" href="https://twitter.com/marksuth" rel="me noopener" title="Twitter"><i class="fab fa-twitter"></i></a></li>
 						<li class="nav-item"><a data-hint="GitHub" class="nav-link" href="https://github.com/marksuth" rel="me noopener" title="GitHub"><i class="fab fa-github"></i></a></li>
 						<li class="nav-item"><a data-hint="Instagram" class="nav-link" href="https://instagram.com/marksuth" rel="me noopener" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 						<li class="nav-item"><a data-hint="Linkedin" class="nav-link" href="https://www.linkedin.com/in/marksuth" rel="me noopener" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
