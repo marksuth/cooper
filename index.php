@@ -54,7 +54,6 @@ get_header();
 					<?php
 				} else { ?>
 					<div class="col-12 my-2">
-					<hr />
 					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 					<div class="text-muted">
 					<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
