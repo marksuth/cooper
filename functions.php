@@ -106,6 +106,8 @@ wp_dequeue_style( 'wp-block-library' ); // Wordpress core
 wp_dequeue_style( 'wp-block-library-theme' ); // Wordpress core
 wp_dequeue_style( 'wc-block-style' ); // WooCommerce
 wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
+wp_dequeue_style( 'indieweb' ); //Name of Style ID.
+wp_dequeue_style( 'indieweb-post-kinds' ); //Name of Style ID.
 }
 
 /**

@@ -23,16 +23,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#214154">
   <script>
-    var _paq = window._paq = window._paq || [];
-    _paq.push(["trackPageView"]), _paq.push(["enableLinkTracking"]),
-      function() {
-        var a = "https://analytics.marksuth.dev/";
-        _paq.push(["setTrackerUrl", a + "matomo.php"]), _paq.push(["setSiteId", "1"]);
-        var e = document,
-          t = e.createElement("script"),
-          p = e.getElementsByTagName("script")[0];
-        t.async = !0, t.src = a + "matomo.js", p.parentNode.insertBefore(t, p)
-      }();
+var _paq=window._paq=window._paq||[];_paq.push(["trackPageView"]),_paq.push(["enableLinkTracking"]),function(){var a="https://analytics.marksuth.dev/";_paq.push(["setTrackerUrl",a+"matomo.php"]),_paq.push(["setSiteId","1"]);var e=document,t=e.createElement("script"),p=e.getElementsByTagName("script")[0];t.async=!0,t.src=a+"matomo.js",p.parentNode.insertBefore(t,p)}();
   </script>
 </head>
 
