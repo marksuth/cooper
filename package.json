@@ -9,7 +9,6 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "@github/time-elements": "^3.1.2",
     "@popperjs/core": "^2.10.2",
     "inter-ui": "3.19.3"

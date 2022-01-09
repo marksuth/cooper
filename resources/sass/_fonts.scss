@@ -18,18 +18,18 @@
 
 // Font Awesome
 @font-face {
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Font Awesome';
     font-style: normal;
-    font-weight: 900;
+    font-weight: 300;
     font-display: swap;
     src:
-    url('~@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2') format('woff2');
+    url('/wp-content/themes/cooper/fonts/fa-light-300.woff2') format('woff2');
   }
   
   .fa,
-  .fas {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+  .fal {
+    font-family: 'Font Awesome';
+    font-weight: 300;
   }
 
   @font-face {
@@ -37,7 +37,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('~@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2') format('woff2');
+    src: url('/wp-content/themes/cooper/fonts/fa-brands-400.woff2') format('woff2');
   }
   
   .fab {
@@ -45,10 +45,10 @@
     font-weight: 400;
   }
 
-@import "~@fortawesome/fontawesome-free/scss/variables";
-@import "~@fortawesome/fontawesome-free/scss/mixins";
-@import "~@fortawesome/fontawesome-free/scss/core";
-@import "~@fortawesome/fontawesome-free/scss/larger";
-@import "~@fortawesome/fontawesome-free/scss/fixed-width";
-@import "~@fortawesome/fontawesome-free/scss/icons";
-@import "~@fortawesome/fontawesome-free/scss/screen-reader";
+@import "fontawesome/variables";
+@import "fontawesome/mixins";
+@import "fontawesome/core";
+// @import "fontawesome/larger";
+@import "fontawesome/fixed-width";
+@import "fontawesome/icons";
+// @import "fontawesome/screen-reader";

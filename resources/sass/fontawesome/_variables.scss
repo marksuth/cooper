@@ -1,0 +1,47 @@
+// Variables
+// --------------------------
+
+$fa-font-path:         "../webfonts" !default;
+$fa-font-size-base:    16px !default;
+$fa-font-display:      block !default;
+$fa-css-prefix:        fa !default;
+$fa-version:           "5.15.4" !default;
+$fa-border-color:      #eee !default;
+$fa-inverse:           #fff !default;
+$fa-li-width:          2em !default;
+$fa-fw-width:          (20em / 16);
+$fa-primary-opacity:   1 !default;
+$fa-secondary-opacity: .4 !default;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
+
+$fa-var-calendar: \f133;
+$fa-var-chevron-down: \f078;
+$fa-var-chevron-left: \f053;
+$fa-var-chevron-right: \f054;
+$fa-var-chevron-up: \f077;
+$fa-var-comment: \f075;
+$fa-var-creative-commons: \f25e;
+$fa-var-digital-ocean: \f391;
+$fa-var-discord: \f392;
+$fa-var-envelope: \f0e0;
+$fa-var-external-link: \f08e;
+$fa-var-flickr: \f16e;
+$fa-var-github: \f09b;
+$fa-var-globe: \f0ac;
+$fa-var-google: \f1a0;
+$fa-var-linkedin-in: \f0e1;
+$fa-var-mastodon: \f4f6;
+$fa-var-reddit: \f1a1;
+$fa-var-spotify: \f1bc;
+$fa-var-tag: \f02b;
+$fa-var-tags: \f02c;
+$fa-var-tree: \f1bb;
+$fa-var-twitter: \f099;
+$fa-var-untappd: \f405;
+$fa-var-user: \f007;
+$fa-var-xbox: \f412;
+$fa-var-youtube: \f167;
