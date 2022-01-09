@@ -17,7 +17,7 @@
       An IndieWeb Webring 🕸💍
       <a href="https://xn--sr8hvo.ws/%F0%9F%93%BB%F0%9F%93%85%F0%9F%9A%BF/next">→</a>
     </p>
-    <p class="small text-muted">&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. This site is carbon offset via <a href="https://treepoints.green/?ref=tTANfORx1u9H" rel="noopener"><i class="fas fa-tree"></i> TreePoints</a> and hosted on <a href="https://m.do.co/c/0af74d4b6f61"><i class="fab fa-digital-ocean"></i> Digital Ocean</a>.
+    <p class="small text-muted">&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. This site is carbon offset via <a href="https://treepoints.green/?ref=tTANfORx1u9H" rel="noopener"><i class="fa fa-tree"></i> TreePoints</a> and hosted on <a href="https://m.do.co/c/0af74d4b6f61"><i class="fab fa-digital-ocean"></i> Digital Ocean</a>.
       <br>Unless otherwise stated, this site is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">Creative Commons Attribution 3.0 Unported License</a>.
       <?php
       wp_nav_menu(array(
