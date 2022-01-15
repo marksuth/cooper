@@ -108,8 +108,8 @@ wp_dequeue_style( 'wc-block-style' ); // WooCommerce
 wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
 wp_dequeue_style( 'indieweb' ); //Indieweb
 wp_dequeue_style( 'kind' ); //Post Kinds
-wp_dequeue_style( 'syndication-links' ); //Syndication Links
-wp_dequeue_style( 'semantic-linkbacks' ); //Semantic Linkbacks
+wp_dequeue_style( 'syndication-style' ); //Syndication Links
+wp_dequeue_style( 'semantic-linkbacks-css' ); //Semantic Linkbacks
 }
 
 /**
