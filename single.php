@@ -48,7 +48,7 @@ while (have_posts()) :
 			<article class="h-entry">
 				<header>
 					<h1 class="entry-title py-5 p-name"><?php the_title(); ?></h1>
-					<p class="text-muted"><i class="fa fa-user"></i> <a rel="author" class="p-author h-card" href="https://marksuth.dev">Mark Sutherland</a> <i class="fa fa-calendar"></i> <time class="dt-published" datetime="<?php the_time( 'c' ); ?>"><?php the_date(); ?></time> </p>
+					<p class="text-muted"><?php echo get_post_kind_slug(); ?> posted <time class="dt-published" datetime="<?php the_time( 'c' ); ?>"><?php the_date(); ?></time> by <a rel="author" class="p-author h-card" href="https://marksuth.dev">Mark Sutherland</a> </p>
 				</header>
 					<main class="e-content">
 					<?php the_content(); ?>

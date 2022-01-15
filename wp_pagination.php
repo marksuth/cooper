@@ -8,8 +8,8 @@ function wp_bootstrap_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( 'Previous', 'text-domain' ),
-        'next_string'     => __( 'Next', 'text-domain' ),
+        'previous_string' => __( 'Previous', 'cooper' ),
+        'next_string'     => __( 'Next', 'cooper' ),
         'before_output'   => ' <ul class="pagination justify-content-center">',
         'after_output'    => '</ul>'
     );
@@ -54,11 +54,11 @@ function wp_bootstrap_pagination( $args = array() ) {
     
     $firstpage = esc_attr( get_pagenum_link(1) );
     if ( $firstpage && (1 != $page) )
-        $echo .= ' <li class="page-item"><a class="page-link" href="' . $firstpage . '" aria-label="Previous"><span aria-hidden="true">' . __( 'First', 'text-domain' ) . '</span></a></li>';
+        $echo .= ' <li class="page-item"><a class="page-link" href="' . $firstpage . '" aria-label="Previous"><span aria-hidden="true">' . __( 'First', 'cooper' ) . '</span></a></li>';
 
 
     if ( $previous && (1 != $page) )
-        $echo .= '<li class="page-item"><a class="page-link" href="' . $previous . '" title="' . __( 'previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li class="page-item"><a class="page-link" href="' . $previous . '" title="' . __( 'previous', 'cooper') . '">' . $args['previous_string'] . '</a></li>';
     
 
      if ( !empty($min) && !empty($max) ) {
@@ -75,11 +75,11 @@ function wp_bootstrap_pagination( $args = array() ) {
     $next = intval($page) + 1;
     $next = esc_attr( get_pagenum_link($next) );
     if ($next && ($count != $page) )
-        $echo .= '<li class="page-item"><a class="page-link" href="' . $next . '" title="' . __( 'next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li class="page-item"><a class="page-link" href="' . $next . '" title="' . __( 'next', 'cooper') . '">' . $args['next_string'] . '</a></li>';
     
     $lastpage = esc_attr( get_pagenum_link($count) );
     if ( $lastpage ) {
-        $echo .= '<li class="page-item"><a class="page-link" href="' . $lastpage . '" aria-label="Next"><span aria-hidden="true">' . __( 'Last', 'text-domain' ) . '</span></a></li>';
+        $echo .= '<li class="page-item"><a class="page-link" href="' . $lastpage . '" aria-label="Next"><span aria-hidden="true">' . __( 'Last', 'cooper' ) . '</span></a></li>';
     }
 
     if ( isset($echo) )

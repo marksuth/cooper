@@ -44,41 +44,38 @@ get_header();
 				<?php
 				// the query
 				$the_query = new WP_Query(array(
-					'category_name' => 'uncategorised',
+					'post_type' => 'post',
 					'posts_per_page' => 5,
 				));
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-						<article class="h-entry">
-							<header><?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?></header>
+						<article class="h-entry kind-<?php echo get_post_kind_slug(); ?>">
+							<header>
+								<a href="https://marksuth.dev/kind/<?php echo get_post_kind_slug(); ?>"><?php echo get_post_kind_slug(); ?></a> posted <relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
+									<time class="dt-published"><?php the_date(); ?></time>
+								</relative-time><br>
+								<?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+							</header>
 							<main>
-							<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
-						<time class="dt-published"><?php the_date(); ?></time>
-					</relative-time>
-							<div class="py-3 p-summary">
-								<?php the_excerpt(); ?>
+
+								<div class="pt-3 p-summary">
+									<?php the_excerpt(); ?>
+
+								</div>
+							</main>
+							<footer>
 								<p class="text-end">
 									<a href="<?php the_permalink(); ?>" class="btn btn-primary u-url">View Post ></a>
 								</p>
-							</div>
-							</main>
-							<footer>
-							<div class="d-flex">
-
-								<div class="text-muted font-monospace small p-category">
-									<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
-									<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
-								</div>
-							</div>
 							</footer>
 						</article>
-							<hr />
+						<hr />
 					<?php endwhile;
 					wp_reset_postdata();
 				else : ?>
-					<p><?php __('<p>No Recent Posts</p>'); ?></p>
+					<p><?php __('No Recent Posts', 'cooper'); ?></p>
 				<?php endif; ?>
 				<p class="text-end">
-<a href="/posts" class="btn btn-primary">View All Posts <i class="fa fa-chevron-right fa-fw"></i></a>
+					<a href="/posts" class="btn btn-primary"><?php __('View All Posts', 'cooper'); ?> <i class="fa fa-chevron-right fa-fw"></i></a>
 				</p>
 			</div>
 		</div>

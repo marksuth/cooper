@@ -53,28 +53,27 @@ get_header();
 
 					<?php
 				} else { ?>
-					<div class="col-12 my-2">
-					<?php the_title('<h2 class="h4 pt-2 my-0"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
-					<div class="text-muted">
-					<relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric">
-						<?php the_date(); ?>
-					</relative-time>
-					</div>
-					<div class="py-3">
-						<?php the_excerpt(); ?>
-						<p class="text-end">
-							<a href="<?php the_permalink(); ?>" class="btn btn-link">View Post ></a>
-					</div>
-					<div class="d-flex">
+						<article class="h-entry kind-<?php echo get_post_kind_slug(); ?>">
+							<header>
+								<a href="https://marksuth.dev/kind/<?php echo get_post_kind_slug(); ?>"><?php echo get_post_kind_slug(); ?></a> posted <relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
+									<time class="dt-published"><?php the_date(); ?></time>
+								</relative-time><br>
+								<?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+							</header>
+							<main>
 
-<div class="text-muted font-monospace small">
-	<?php the_tags('<i class="fa fa-fw fa-tags"></i> ', ', '); ?>
-	<i class="fa fa-comment"> <?php comments_number('0', '1', '%'); ?></i>
-</div>
-</div> 
-					<hr />
+								<div class="pt-3 p-summary">
+									<?php the_excerpt(); ?>
 
-		</div>
+								</div>
+							</main>
+							<footer>
+								<p class="text-end">
+									<a href="<?php the_permalink(); ?>" class="btn btn-primary u-url">View Post ></a>
+								</p>
+							</footer>
+						</article>
+						
 			<?php 
 				};
 		endwhile; ?>
