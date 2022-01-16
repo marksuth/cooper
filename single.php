@@ -66,7 +66,7 @@ while (have_posts()) :
 					?>
 						</p>
 						<p class="font-monospace small text-muted">
-						Permalink: <a class="u-url" href="<?php echo get_post_permalink(); ?>"><?php echo get_post_permalink(); ?></a>
+						Permalink: <a class="u-url" href="<?php echo wp_get_shortlink(); ?>"><?php echo wp_get_shortlink(); ?></a>
 					</footer>
 				</article>
 				<hr>
