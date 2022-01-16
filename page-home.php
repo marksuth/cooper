@@ -50,9 +50,9 @@ get_header();
 				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article class="h-entry kind-<?php echo get_post_kind_slug(); ?>">
 							<header>
-								<a href="https://marksuth.dev/kind/<?php echo get_post_kind_slug(); ?>"><?php echo get_post_kind_slug(); ?></a> posted <relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
-									<time class="dt-published"><?php the_date(); ?></time>
-								</relative-time><br>
+								<span class="text-muted font-monospace"><a href="https://marksuth.dev/kind/<?php echo get_post_kind_slug(); ?>"><?php echo get_post_kind_slug(); ?></a> posted <relative-time datetime="<?php the_date('c'); ?>" day="numeric" month="long" year="numeric" class="text-muted">
+										<time class="dt-published"><?php the_date(); ?></time>
+									</relative-time></span><br>
 								<?php the_title('<h2 class="h4 pt-2 my-0 p-name"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
 							</header>
 							<main>
