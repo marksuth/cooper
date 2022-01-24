@@ -48,3 +48,9 @@ article > main a {
   .site-main {
 min-height: calc(90vh - 60px);
   }
+.mention-list {
+  @extend .list-unstyled;
+}
+.hide-name {
+  @extend [hidden];
+}
